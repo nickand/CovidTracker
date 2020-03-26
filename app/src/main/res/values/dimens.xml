@@ -21,6 +21,8 @@
     <dimen name="text_size_xxs">8sp</dimen>
     <dimen name="text_size_xs">12sp</dimen>
     <dimen name="text_size_sm">16sp</dimen>
+    <dimen name="text_size_ssm">18sp</dimen>
+    <dimen name="text_size_sssm">20sp</dimen>
     <dimen name="text_size_md">24sp</dimen>
     <dimen name="text_size_lg">32sp</dimen>
 </resources>

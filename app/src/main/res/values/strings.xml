@@ -2,5 +2,7 @@
     <string name="app_name">CovidTracker</string>
     <string name="app_title">Coronavirus Tracker</string>
     <string name="today_statistics">Today’s World</string>
+    <string name="tips_officers">Tips Officers</string>
+    <string name="tips_officers_subtitle">What you need to know and do.</string>
 
 </resources>

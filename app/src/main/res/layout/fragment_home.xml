@@ -7,15 +7,18 @@
     android:background="@color/gray_extra_dark">
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:fitsSystemWindows="true">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/spacing_lg">
 
             <TextView
                 android:id="@+id/appTitle"
@@ -37,7 +40,7 @@
                 fontPath="fonts/NunitoSans-ExtraBold.ttf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/spacing_lg"
+                android:layout_marginStart="@dimen/spacing_md"
                 android:layout_marginTop="@dimen/text_size_sm"
                 android:layout_marginEnd="@dimen/spacing_xs"
                 android:text="@string/today_statistics"
@@ -49,9 +52,9 @@
             <HorizontalScrollView
                 android:id="@+id/cardsContainer"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_md"
                 android:layout_marginTop="@dimen/text_size_sm"
-                android:layout_marginStart="@dimen/spacing_lg"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/todayStatisticsTitle">
 
@@ -61,23 +64,74 @@
                     android:orientation="horizontal">
 
                     <include layout="@layout/item_total_cases" />
+
                     <include layout="@layout/item_total_recovered" />
+
                     <include layout="@layout/item_total_death" />
 
                 </LinearLayout>
 
             </HorizontalScrollView>
 
+            <TextView
+                android:id="@+id/tipsOfficersTitle"
+                fontPath="fonts/NunitoSans-ExtraBold.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_md"
+                android:layout_marginTop="@dimen/text_size_sm"
+                android:layout_marginEnd="@dimen/spacing_xs"
+                android:text="@string/tips_officers"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_lg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardsContainer" />
+
+            <TextView
+                android:id="@+id/tipsOfficersSubtitle"
+                fontPath="fonts/NunitoSans-ExtraBold.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_md"
+                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:layout_marginEnd="@dimen/spacing_xs"
+                android:text="@string/tips_officers_subtitle"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_sm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tipsOfficersTitle" />
+
+            <include
+                android:id="@+id/itemCoranaviruses"
+                layout="@layout/item_coranaviruses"
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="@dimen/spacing_md"
+                android:layout_marginTop="@dimen/text_size_sm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tipsOfficersSubtitle" />
+
+            <include
+                android:id="@+id/itemSymptoms"
+                layout="@layout/item_symptoms"
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="@dimen/spacing_xs"
+                android:layout_marginTop="@dimen/text_size_sm"
+                app:layout_constraintStart_toEndOf="@+id/itemCoranaviruses"
+                app:layout_constraintTop_toBottomOf="@+id/tipsOfficersSubtitle" />
+
             <ImageView
                 android:id="@+id/bannerImage"
-                android:layout_width="340dp"
-                android:layout_height="300dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginStart="@dimen/spacing_ssm"
                 android:layout_marginTop="@dimen/spacing_mmd"
                 android:layout_marginEnd="@dimen/spacing_ssm"
+                app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="@+id/appTitle"
                 app:layout_constraintStart_toStartOf="@+id/appTitle"
-                app:layout_constraintTop_toBottomOf="@+id/cardsContainer"
+                app:layout_constraintTop_toBottomOf="@+id/itemCoranaviruses"
                 tools:src="@drawable/ic_virus" />
 
             <ProgressBar
