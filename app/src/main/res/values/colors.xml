@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#555656</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FFC000</color>
 
     <color name="black">#000000</color>
     <color name="black_30_percent">#4D000000</color>
@@ -19,4 +19,17 @@
     <color name="white_30_percent">#4DFFFFFF</color>
     <color name="white_70_percent">#B3FFFFFF</color>
     <color name="white_90_percent">#E6FFFFFF</color>
+    <color name="red">#E20F33</color>
+
+    <!-- Red gradient -->
+    <color name="colorRed_A400">#FF1744</color>
+    <color name="colorRed_900">#B71C1C</color>
+
+    <!-- Amber gradient -->
+    <color name="colorAmber_A400">#FFC400</color>
+    <color name="colorAmber_900">#FF6F00</color>
+
+    <!-- Green gradient -->
+    <color name="colorGreen_A400">#00E676</color>
+    <color name="colorGreen_900">#1B5E20</color>
 </resources>

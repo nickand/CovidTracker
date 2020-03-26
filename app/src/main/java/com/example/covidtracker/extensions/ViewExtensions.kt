@@ -57,7 +57,7 @@ fun ImageView.loadGlideUrl(url: GlideUrl) {
         })
         .apply(
             RequestOptions()
-                .placeholder(R.color.gray)
+                .placeholder(R.color.white_70_percent)
                 .error(R.drawable.ic_virus)
         )
         .into(this)

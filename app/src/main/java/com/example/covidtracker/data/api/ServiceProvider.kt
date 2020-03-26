@@ -1,5 +1,7 @@
 package com.example.covidtracker.data.api
 
+import com.bumptech.glide.load.model.GlideUrl
+import com.bumptech.glide.load.model.LazyHeaders
 import com.example.covidtracker.data.ApiClient
 import com.example.covidtracker.util.Constants
 import okhttp3.Interceptor
@@ -34,4 +36,13 @@ fun getApiService(): ApiClient {
         .build().run {
             create(ApiClient::class.java)
         }
+}
+
+fun getGlideUrl(): GlideUrl {
+    return GlideUrl(
+        Constants.MASK_INSTRUCTIONS_URL, LazyHeaders.Builder()
+            .addHeader("x-rapidapi-host", "coronavirus-monitor.p.rapidapi.com")
+            .addHeader("x-rapidapi-key", Constants.API_KEY)
+            .build()
+    )
 }

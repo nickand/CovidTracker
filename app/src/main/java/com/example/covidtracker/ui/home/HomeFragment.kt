@@ -1,18 +1,26 @@
 package com.example.covidtracker.ui.home
 
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.bumptech.glide.Glide
 import com.example.covidtracker.R
-import com.example.covidtracker.di.getGlideUrl
+import com.example.covidtracker.data.api.getGlideUrl
 import com.example.covidtracker.extensions.gone
+import com.example.covidtracker.extensions.loadGlideUrl
+import com.example.covidtracker.extensions.setRoundCorners
 import com.example.covidtracker.extensions.visible
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.item_total_cases.*
+import kotlinx.android.synthetic.main.item_total_death.*
+import kotlinx.android.synthetic.main.item_total_recovered.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
@@ -31,9 +39,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun loadBanner() {
-        Glide.with(this)
-            .load(getGlideUrl())
-            .into(bannerImage)
+        bannerImage.loadGlideUrl(getGlideUrl())
+        bannerImage.setRoundCorners(R.dimen.spacing_xs)
     }
 
     private fun updateUi(model: HomeViewModel.UiModel) {
@@ -45,6 +52,11 @@ class HomeFragment : Fragment() {
                 progressBar.gone()
 
                 loadBanner()
+                customizeTitleApp()
+
+                txtCasesSubtitle.text = model.worldStat.totalCases
+                txtRecoveredSubtitle.text = model.worldStat.totalRecovered
+                txtDeathSubtitle.text = model.worldStat.totalDeath
 
                 Log.d("TAG", "RESPONSE: "+model.worldStat.toString())
             }
@@ -55,5 +67,15 @@ class HomeFragment : Fragment() {
                 homeViewModel.getWorldStats()
             }
         }
+    }
+
+    private fun customizeTitleApp() {
+        val spannable = SpannableString(getString(R.string.app_title))
+        spannable.setSpan(
+            ForegroundColorSpan(ContextCompat.getColor(requireContext(), R.color.red)),
+            0, 11,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+        appTitle.text = spannable
     }
 }

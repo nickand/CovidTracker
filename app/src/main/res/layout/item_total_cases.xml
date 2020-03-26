@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardTotalCases"
+    app:cardCornerRadius="@dimen/spacing_xxs"
+    app:cardElevation="@dimen/spacing_xxxs"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/todayStatisticsTitle"
+    android:layout_width="200dp"
+    android:layout_height="160dp"
+    android:layout_marginStart="@dimen/spacing_xxs">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/amber_gradient">
+
+        <Space
+            android:id="@+id/space"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            app:layout_constraintBottom_toTopOf="@id/txtCasesSubtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/space"
+            app:layout_constraintVertical_chainStyle="packed"
+            fontPath="fonts/NunitoSans-ExtraBold.ttf"
+            android:text="Total Cases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xs"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            android:textColor="@color/white"
+            android:textSize="@dimen/spacing_sm" />
+
+        <TextView
+            android:id="@+id/txtCasesSubtitle"
+            app:layout_constraintTop_toBottomOf="@id/txtTitle"
+            fontPath="fonts/NunitoSans-ExtraBold.ttf"
+            tools:text="472,381"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xs"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            android:layout_marginBottom="@dimen/spacing_xxs"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_lg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

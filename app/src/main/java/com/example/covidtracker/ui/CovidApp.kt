@@ -1,10 +1,11 @@
-package com.example.covidtracker.extensions
+package com.example.covidtracker.ui
 
 import android.app.Application
+import com.example.covidtracker.R
 import com.example.covidtracker.di.*
-import com.example.covidtracker.util.CrashHandler
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig
 
 class CovidApp : Application() {
 
@@ -15,8 +16,14 @@ class CovidApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Thread.setDefaultUncaughtExceptionHandler(CrashHandler(this))
         mApplication = this
+
+        CalligraphyConfig.initDefault(
+            CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/NunitoSans-SemiBold.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
+        )
 
         startKoin {
             androidContext(this@CovidApp)
