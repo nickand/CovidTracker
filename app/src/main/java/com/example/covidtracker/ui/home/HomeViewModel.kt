@@ -40,7 +40,7 @@ class HomeViewModel(private val homeRepository: HomeRepository) : ViewModel(), C
         job.cancel()
     }
 
-    suspend fun getWorldStats() {
+    fun getWorldStats() {
         launch {
             uiModel.value = UiModel.Loading
             uiModel.value = UiModel.Content(homeRepository.getWorldStats())
