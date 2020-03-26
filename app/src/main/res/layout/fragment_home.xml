@@ -93,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_md"
-                android:layout_marginTop="@dimen/spacing_xxxs"
+                android:layout_marginTop="@dimen/spacing_xxxxs"
                 android:layout_marginEnd="@dimen/spacing_xs"
                 android:text="@string/tips_officers_subtitle"
                 android:textColor="@color/gray"
@@ -121,6 +121,27 @@
                 app:layout_constraintStart_toEndOf="@+id/itemCoranaviruses"
                 app:layout_constraintTop_toBottomOf="@+id/tipsOfficersSubtitle" />
 
+            <include
+                android:id="@+id/itemTransmitted"
+                layout="@layout/item_transmitted"
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/spacing_xs"
+                app:layout_constraintStart_toStartOf="@+id/itemCoranaviruses"
+                app:layout_constraintEnd_toEndOf="@+id/itemCoranaviruses"
+                app:layout_constraintTop_toBottomOf="@+id/itemCoranaviruses" />
+
+            <include
+                android:id="@+id/itemPrevent"
+                layout="@layout/item_prevent"
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/spacing_xs"
+                app:layout_constraintStart_toEndOf="@+id/itemTransmitted"
+                app:layout_constraintStart_toStartOf="@+id/itemSymptoms"
+                app:layout_constraintEnd_toEndOf="@+id/itemSymptoms"
+                app:layout_constraintTop_toBottomOf="@+id/itemSymptoms" />
+
             <ImageView
                 android:id="@+id/bannerImage"
                 android:layout_width="0dp"
@@ -131,7 +152,7 @@
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="@+id/appTitle"
                 app:layout_constraintStart_toStartOf="@+id/appTitle"
-                app:layout_constraintTop_toBottomOf="@+id/itemCoranaviruses"
+                app:layout_constraintTop_toBottomOf="@+id/itemTransmitted"
                 tools:src="@drawable/ic_virus" />
 
             <ProgressBar

@@ -9,7 +9,7 @@
     app:cardPreventCornerOverlap="false"
     app:cardUseCompatPadding="true"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/tipsOfficersTitle">
+    app:layout_constraintTop_toBottomOf="@+id/itemCoranaviruses">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -19,11 +19,11 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginTop="@dimen/spacing_xs"
+            android:layout_marginTop="@dimen/spacing_md"
             android:layout_marginStart="@dimen/spacing_xs"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_sneeze"
+            app:srcCompat="@drawable/ic_clean"
             android:tint="@color/white"/>
 
         <Space
@@ -38,9 +38,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_ssm"
-            android:layout_marginTop="@dimen/spacing_sm"
+            android:layout_marginTop="@dimen/spacing_xs"
             android:layout_marginEnd="@dimen/spacing_xs"
-            android:text="What are the \nsymptoms?"
+            android:text="How to prevent it?"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_sssm"
             android:layout_marginBottom="@dimen/spacing_md"
