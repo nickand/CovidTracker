@@ -25,7 +25,7 @@
                 fontPath="fonts/NunitoSans-ExtraBold.ttf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/spacing_md"
+                android:layout_marginStart="@dimen/spacing_xs"
                 android:layout_marginTop="@dimen/spacing_md"
                 android:layout_marginEnd="@dimen/spacing_xs"
                 android:text="@string/tips_officers"
@@ -39,7 +39,7 @@
                 fontPath="fonts/NunitoSans-ExtraBold.ttf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/spacing_md"
+                android:layout_marginStart="@dimen/spacing_xs"
                 android:layout_marginTop="@dimen/spacing_xxxxs"
                 android:layout_marginEnd="@dimen/spacing_xs"
                 android:text="@string/tips_officers_subtitle"
@@ -51,20 +51,23 @@
             <include
                 android:id="@+id/itemCoranaviruses"
                 layout="@layout/item_coranaviruses"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
                 android:layout_height="200dp"
-                android:layout_marginStart="@dimen/spacing_md"
+                android:layout_marginStart="@dimen/spacing_xs"
                 android:layout_marginTop="@dimen/text_size_sm"
+                app:layout_constraintEnd_toStartOf="@+id/itemSymptoms"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tipsOfficersSubtitle" />
 
             <include
                 android:id="@+id/itemSymptoms"
                 layout="@layout/item_symptoms"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_marginStart="@dimen/spacing_xs"
                 android:layout_marginTop="@dimen/text_size_sm"
+                android:layout_marginEnd="@dimen/spacing_xs"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/itemCoranaviruses"
                 app:layout_constraintTop_toBottomOf="@+id/tipsOfficersSubtitle" />
 
