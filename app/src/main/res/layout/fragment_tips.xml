@@ -74,7 +74,7 @@
             <include
                 android:id="@+id/itemTransmitted"
                 layout="@layout/item_transmitted"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="@dimen/spacing_xs"
                 app:layout_constraintEnd_toEndOf="@+id/itemCoranaviruses"
@@ -84,7 +84,7 @@
             <include
                 android:id="@+id/itemPrevent"
                 layout="@layout/item_prevent"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="@dimen/spacing_xs"
                 app:layout_constraintEnd_toEndOf="@+id/itemSymptoms"
@@ -95,7 +95,7 @@
             <include
                 android:id="@+id/itemWearMask"
                 layout="@layout/item_mask"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="@dimen/spacing_xs"
                 app:layout_constraintEnd_toEndOf="@+id/itemCoranaviruses"
@@ -105,7 +105,7 @@
             <include
                 android:id="@+id/itemDiagnosis"
                 layout="@layout/item_diagnosis"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="@dimen/spacing_xs"
                 app:layout_constraintEnd_toEndOf="@+id/itemSymptoms"
@@ -116,7 +116,7 @@
             <include
                 android:id="@+id/itemVaccine"
                 layout="@layout/item_vaccine"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="@dimen/spacing_xs"
                 app:layout_constraintEnd_toEndOf="@+id/itemSymptoms"
@@ -127,7 +127,7 @@
             <include
                 android:id="@+id/itemTravel"
                 layout="@layout/item_travel"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="@dimen/spacing_xs"
                 app:layout_constraintEnd_toEndOf="@+id/itemCoranaviruses"
