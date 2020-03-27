@@ -34,18 +34,16 @@
 
         <TextView
             android:id="@+id/txtTitle"
-            fontPath="fonts/NunitoSans-ExtraBold.ttf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_ssm"
-            android:layout_marginTop="@dimen/spacing_sm"
-            android:layout_marginEnd="@dimen/spacing_xs"
+            android:layout_marginBottom="@dimen/spacing_md"
+            app:fontFamily="@font/nunito_sans_extrabold"
             android:text="@string/what_are_the_symptoms"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_sssm"
-            android:layout_marginBottom="@dimen/spacing_md"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

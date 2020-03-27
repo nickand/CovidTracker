@@ -42,7 +42,7 @@
 
             <TextView
                 android:id="@+id/title"
-                fontPath="fonts/NunitoSans-ExtraBold.ttf"
+                app:fontFamily="fonts/NunitoSans-ExtraBold.ttf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_md"
@@ -55,7 +55,7 @@
 
             <TextView
                 android:id="@+id/subtitle"
-                fontPath="fonts/NunitoSans-SemiBold.ttf"
+                app:fontFamily="fonts/NunitoSans-SemiBold.ttf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_md"

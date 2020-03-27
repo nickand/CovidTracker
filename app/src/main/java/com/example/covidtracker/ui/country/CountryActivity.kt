@@ -1,6 +1,5 @@
 package com.example.covidtracker.ui.country
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +8,6 @@ import com.example.covidtracker.extensions.selectTab
 import com.example.covidtracker.ui.MainActivity
 import com.example.covidtracker.ui.tips.TipsActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 class CountryActivity : AppCompatActivity() {
 
@@ -45,9 +43,5 @@ class CountryActivity : AppCompatActivity() {
     private fun initSearch() {
         startActivity(Intent(this, TipsActivity::class.java))
         overridePendingTransition(0, 0)
-    }
-
-    override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
     }
 }

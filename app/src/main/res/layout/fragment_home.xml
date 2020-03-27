@@ -22,12 +22,12 @@
 
             <TextView
                 android:id="@+id/appTitle"
-                fontPath="fonts/NunitoSans-ExtraBold.ttf"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_xs"
                 android:layout_marginTop="@dimen/spacing_xs"
                 android:layout_marginEnd="@dimen/spacing_xs"
+                app:fontFamily="@font/nunito_sans_extrabold"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_lg"
@@ -37,12 +37,11 @@
 
             <TextView
                 android:id="@+id/todayStatisticsTitle"
-                fontPath="fonts/NunitoSans-ExtraBold.ttf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_xs"
                 android:layout_marginTop="@dimen/text_size_sm"
-                android:layout_marginEnd="@dimen/spacing_xs"
+                app:fontFamily="@font/nunito_sans_extrabold"
                 android:text="@string/today_statistics"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_lg"
@@ -75,12 +74,11 @@
 
             <TextView
                 android:id="@+id/tipsOfficersTitle"
-                fontPath="fonts/NunitoSans-ExtraBold.ttf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_xs"
                 android:layout_marginTop="@dimen/text_size_sm"
-                android:layout_marginEnd="@dimen/spacing_xs"
+                app:fontFamily="@font/nunito_sans_extrabold"
                 android:text="@string/tips_officers"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_lg"
@@ -89,12 +87,11 @@
 
             <TextView
                 android:id="@+id/tipsOfficersSubtitle"
-                fontPath="fonts/NunitoSans-ExtraBold.ttf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_xs"
                 android:layout_marginTop="@dimen/spacing_xxxxs"
-                android:layout_marginEnd="@dimen/spacing_xs"
+                app:fontFamily="@font/nunito_sans_extrabold"
                 android:text="@string/tips_officers_subtitle"
                 android:textColor="@color/gray"
                 android:textSize="@dimen/text_size_sm"

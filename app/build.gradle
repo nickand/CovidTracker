@@ -79,9 +79,6 @@ dependencies {
     //Support Design
     implementation 'com.google.android.material:material:1.0.0'
 
-    //Calligraphy
-    implementation 'uk.co.chrisjenx:calligraphy:2.2.0'
-
     //Glide
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"

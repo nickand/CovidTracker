@@ -9,7 +9,6 @@ import com.example.covidtracker.extensions.selectTab
 import com.example.covidtracker.ui.MainActivity
 import com.example.covidtracker.ui.country.CountryActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 class TipsActivity : AppCompatActivity() {
 
@@ -45,9 +44,5 @@ class TipsActivity : AppCompatActivity() {
 
     private fun initSearch() {
         navigationFragment.selectTab(R.id.tipsFragment)
-    }
-
-    override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
     }
 }

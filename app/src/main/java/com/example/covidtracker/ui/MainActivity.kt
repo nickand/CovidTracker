@@ -1,6 +1,5 @@
 package com.example.covidtracker.ui
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.Window
@@ -10,7 +9,6 @@ import com.example.covidtracker.extensions.selectTab
 import com.example.covidtracker.ui.country.CountryActivity
 import com.example.covidtracker.ui.tips.TipsActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 
 class MainActivity : AppCompatActivity() {
@@ -48,9 +46,5 @@ class MainActivity : AppCompatActivity() {
 
     private fun initHome() {
         navigationFragment.selectTab(R.id.homeFragment)
-    }
-
-    override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
     }
 }

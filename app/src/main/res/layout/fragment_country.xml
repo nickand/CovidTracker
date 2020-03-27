@@ -11,46 +11,49 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_sm"
-        android:padding="@dimen/spacing_xxs"
         android:background="@drawable/round_amber_gradient"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:padding="@dimen/spacing_xxs"
         android:text="Confirmed"
         android:textAlignment="center"
-        android:textSize="@dimen/text_size_sm"
         android:textColor="@color/white"
-        app:layout_constraintHorizontal_chainStyle="spread"
+        android:textSize="@dimen/text_size_sm"
         app:layout_constraintEnd_toStartOf="@+id/recoveredTitle"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/recoveredTitle"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_sm"
+        android:background="@drawable/round_green_gradient"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:padding="@dimen/spacing_xxs"
         android:text="Recovered"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:layout_marginTop="@dimen/spacing_sm"
-        android:padding="@dimen/spacing_xxs"
-        android:background="@drawable/round_green_gradient"
         android:textSize="@dimen/text_size_sm"
-        app:layout_constraintStart_toEndOf="@+id/confirmedTitle"
         app:layout_constraintEnd_toStartOf="@+id/deathTitle"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toEndOf="@+id/confirmedTitle"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/deathTitle"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_sm"
+        android:background="@drawable/round_red_gradient"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:padding="@dimen/spacing_xxs"
         android:text="Death"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:layout_marginTop="@dimen/spacing_sm"
-        android:padding="@dimen/spacing_xxs"
-        android:background="@drawable/round_red_gradient"
         android:textSize="@dimen/text_size_sm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/recoveredTitle"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/countryWiseRecyclerView"

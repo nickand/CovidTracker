@@ -1,11 +1,12 @@
 package com.example.covidtracker.ui
 
 import android.app.Application
-import com.example.covidtracker.R
-import com.example.covidtracker.di.*
+import com.example.covidtracker.di.appModule
+import com.example.covidtracker.di.networkModule
+import com.example.covidtracker.di.repositoryModule
+import com.example.covidtracker.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig
 
 class CovidApp : Application() {
 
@@ -18,21 +19,16 @@ class CovidApp : Application() {
         super.onCreate()
         mApplication = this
 
-        CalligraphyConfig.initDefault(
-            CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/NunitoSans-SemiBold.ttf")
-                .setFontAttrId(R.attr.fontPath)
-                .build()
-        )
-
         startKoin {
             androidContext(this@CovidApp)
-            modules (listOf(
-                appModule,
-                viewModelModule,
-                networkModule,
-                repositoryModule
-            ))
+            modules(
+                listOf(
+                    appModule,
+                    viewModelModule,
+                    networkModule,
+                    repositoryModule
+                )
+            )
         }
     }
 }

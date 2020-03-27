@@ -26,33 +26,31 @@
 
         <TextView
             android:id="@+id/txtTitle"
-            app:layout_constraintBottom_toTopOf="@id/txtCasesSubtitle"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/space"
-            app:layout_constraintVertical_chainStyle="packed"
-            fontPath="fonts/NunitoSans-ExtraBold.ttf"
-            android:text="Total Cases"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_xs"
             android:layout_marginTop="@dimen/spacing_sm"
-            android:layout_marginEnd="@dimen/spacing_xs"
+            app:fontFamily="@font/nunito_sans_extrabold"
+            android:text="Total Cases"
             android:textColor="@color/white"
-            android:textSize="@dimen/spacing_sm" />
+            android:textSize="@dimen/spacing_sm"
+            app:layout_constraintBottom_toTopOf="@id/txtCasesSubtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/space"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
             android:id="@+id/txtCasesSubtitle"
-            app:layout_constraintTop_toBottomOf="@id/txtTitle"
-            fontPath="fonts/NunitoSans-ExtraBold.ttf"
-            tools:text="472,381"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_xs"
             android:layout_marginTop="@dimen/spacing_xs"
-            android:layout_marginEnd="@dimen/spacing_xs"
-            android:layout_marginBottom="@dimen/spacing_xxs"
+            app:fontFamily="@font/nunito_sans_extrabold"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_lg" />
+            android:textSize="@dimen/text_size_lg"
+            android:layout_marginStart="@dimen/spacing_xs"
+            app:layout_constraintTop_toBottomOf="@id/txtTitle"
+            tools:layout_editor_absoluteX="12dp"
+            tools:text="472,381" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
