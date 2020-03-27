@@ -1,4 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Text -->
+    <style name="CV.Text" parent="android:Widget.TextView" />
 
+    <style name="CV.Text.H1">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_lg</item>
+    </style>
 
 </resources>

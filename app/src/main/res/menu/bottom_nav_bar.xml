@@ -6,10 +6,10 @@
     android:icon="@drawable/ic_home"
     android:title="Home"
     app:showAsAction="ifRoom" />    <item
-    android:id="@+id/action_search"
+    android:id="@+id/action_tip"
     android:enabled="true"
-    android:icon="@drawable/ic_search"
-    android:title="Search"
+    android:icon="@drawable/ic_notebook"
+    android:title="Tips"
     app:showAsAction="ifRoom" />    <item
     android:id="@+id/action_worldwide"
     android:enabled="true"

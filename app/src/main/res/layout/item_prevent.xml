@@ -40,10 +40,13 @@
             android:layout_marginStart="@dimen/spacing_ssm"
             android:layout_marginTop="@dimen/spacing_xs"
             android:layout_marginEnd="@dimen/spacing_xs"
+            android:paddingStart="@dimen/spacing_xs"
+            android:paddingEnd="@dimen/spacing_xs"
             android:text="How to prevent it?"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_sssm"
             android:layout_marginBottom="@dimen/spacing_md"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />

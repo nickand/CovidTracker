@@ -14,7 +14,6 @@
         app:defaultNavHost="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.8"
         app:navGraph="@navigation/main"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"/>
 
@@ -24,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_nav_bar"
-        app:itemBackground="@color/colorPrimary"
+        app:itemBackground="@color/gray_extra_dark"
         app:itemIconTint="@android:color/white"
         app:itemTextColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"/>

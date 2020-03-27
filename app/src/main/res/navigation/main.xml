@@ -8,5 +8,38 @@
         android:id="@+id/homeFragment"
         android:name="com.example.covidtracker.ui.home.HomeFragment"
         tools:layout="@layout/fragment_home"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_coronavirusesDetailFragment"
+            app:destination="@id/coronavirusesDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_symptomsDetailFragment"
+            app:destination="@id/symptomsDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_transmittedDetailFragment"
+            app:destination="@id/transmittedDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_preventDetailFragment"
+            app:destination="@id/preventDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coronavirusesDetailFragment"
+        android:name="com.example.covidtracker.ui.detail.CoronavirusesDetailFragment"
+        tools:layout="@layout/fragment_coronaviruses_detail"
+        android:label="CoronavirusesDetailFragment" />
+    <fragment
+        android:id="@+id/symptomsDetailFragment"
+        android:name="com.example.covidtracker.ui.detail.SymptomsDetailFragment"
+        tools:layout="@layout/fragment_symptons_detail"
+        android:label="SymptomsDetailFragment" />
+    <fragment
+        android:id="@+id/transmittedDetailFragment"
+        android:name="com.example.covidtracker.ui.detail.TransmittedDetailFragment"
+        tools:layout="@layout/fragment_transmitted_detail"
+        android:label="TransmittedDetailFragment" />
+    <fragment
+        android:id="@+id/preventDetailFragment"
+        android:name="com.example.covidtracker.ui.detail.PreventDetailFragment"
+        tools:layout="@layout/fragment_prevent_detail"
+        android:label="PreventDetailFragment" />
 </navigation>

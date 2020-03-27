@@ -3,6 +3,7 @@ package com.example.covidtracker.ui.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.covidtracker.data.HomeRepository
 import com.example.covidtracker.data.model.WorldStats
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
@@ -24,7 +25,6 @@ class HomeViewModel(private val homeRepository: HomeRepository) : ViewModel(), C
     sealed class UiModel {
         object Loading : UiModel()
         class Content(val worldStat: WorldStats) : UiModel()
-        class Navigation(val worldStat: WorldStats) : UiModel()
         object ShowUi : UiModel()
     }
 
@@ -45,10 +45,6 @@ class HomeViewModel(private val homeRepository: HomeRepository) : ViewModel(), C
             uiModel.value = UiModel.Loading
             uiModel.value = UiModel.Content(homeRepository.getWorldStats())
         }
-    }
-
-    suspend fun getCountryWiseCases() {
-        return homeRepository.getCountryWiseCases()
     }
 
     override fun onCleared() {

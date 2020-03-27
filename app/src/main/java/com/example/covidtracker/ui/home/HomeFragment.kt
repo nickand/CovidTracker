@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.example.covidtracker.R
 import com.example.covidtracker.data.api.getGlideUrl
 import com.example.covidtracker.extensions.gone
@@ -38,6 +39,23 @@ class HomeFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        itemCoranaviruses.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_coronavirusesDetailFragment)
+        }
+        itemSymptoms.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_symptomsDetailFragment)
+        }
+        itemTransmitted.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_transmittedDetailFragment)
+        }
+        itemPrevent.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_preventDetailFragment)
+        }
+    }
+
     private fun loadBanner() {
         bannerImage.loadGlideUrl(getGlideUrl())
         bannerImage.setRoundCorners(R.dimen.spacing_xs)
@@ -57,11 +75,6 @@ class HomeFragment : Fragment() {
                 txtCasesSubtitle.text = model.worldStat.totalCases
                 txtRecoveredSubtitle.text = model.worldStat.totalRecovered
                 txtDeathSubtitle.text = model.worldStat.totalDeath
-
-                Log.d("TAG", "RESPONSE: "+model.worldStat.toString())
-            }
-            is HomeViewModel.UiModel.Navigation -> {
-
             }
             HomeViewModel.UiModel.ShowUi -> {
                 homeViewModel.getWorldStats()

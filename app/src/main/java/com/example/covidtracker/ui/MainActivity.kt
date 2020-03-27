@@ -1,15 +1,14 @@
 package com.example.covidtracker.ui
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.view.MenuItem
 import android.view.Window
-import android.widget.Toast
-import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 import com.example.covidtracker.R
 import com.example.covidtracker.extensions.selectTab
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.covidtracker.ui.country.CountryActivity
+import com.example.covidtracker.ui.tips.TipsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
@@ -26,11 +25,25 @@ class MainActivity : AppCompatActivity() {
                 R.id.action_home -> {
                     initHome()
                 }
-                R.id.action_search -> {}
-                R.id.action_worldwide -> {}
+                R.id.action_tip -> {
+                    initSearch()
+                }
+                R.id.action_worldwide -> {
+                    initCountry()
+                }
             }
             true
         }
+    }
+
+    private fun initCountry() {
+        startActivity(Intent(this, CountryActivity::class.java))
+        overridePendingTransition(0, 0)
+    }
+
+    private fun initSearch() {
+        startActivity(Intent(this, TipsActivity::class.java))
+        overridePendingTransition(0, 0)
     }
 
     private fun initHome() {

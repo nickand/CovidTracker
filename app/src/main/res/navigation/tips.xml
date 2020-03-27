@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tips"
+    app:startDestination="@id/tipsFragment">
+
+    <fragment
+        android:id="@+id/tipsFragment"
+        android:name="com.example.covidtracker.ui.tips.TipsFragment"
+        tools:layout="@layout/fragment_tips"
+        android:label="TipsFragment" >
+        <action
+            android:id="@+id/action_tipsFragment_to_coronavirusesDetailFragment2"
+            app:destination="@id/coronavirusesDetailFragment2" />
+        <action
+            android:id="@+id/action_tipsFragment_to_symptomsDetailFragment2"
+            app:destination="@id/symptomsDetailFragment2" />
+        <action
+            android:id="@+id/action_tipsFragment_to_transmittedDetailFragment2"
+            app:destination="@id/transmittedDetailFragment2" />
+        <action
+            android:id="@+id/action_tipsFragment_to_preventDetailFragment2"
+            app:destination="@id/preventDetailFragment2" />
+        <action
+            android:id="@+id/action_tipsFragment_to_maskDetailFragment"
+            app:destination="@id/maskDetailFragment" />
+        <action
+            android:id="@+id/action_tipsFragment_to_diagnosisDetailFragment"
+            app:destination="@id/diagnosisDetailFragment" />
+        <action
+            android:id="@+id/action_tipsFragment_to_travelDetailFragment"
+            app:destination="@id/travelDetailFragment" />
+        <action
+            android:id="@+id/action_tipsFragment_to_treatmentDetailFragment"
+            app:destination="@id/treatmentDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coronavirusesDetailFragment2"
+        android:name="com.example.covidtracker.ui.detail.CoronavirusesDetailFragment"
+        tools:layout="@layout/fragment_coronaviruses_detail"
+        android:label="CoronavirusesDetailFragment" />
+    <fragment
+        android:id="@+id/symptomsDetailFragment2"
+        android:name="com.example.covidtracker.ui.detail.SymptomsDetailFragment"
+        tools:layout="@layout/fragment_symptons_detail"
+        android:label="SymptomsDetailFragment" />
+    <fragment
+        android:id="@+id/diagnosisDetailFragment"
+        android:name="com.example.covidtracker.ui.detail.DiagnosisDetailFragment"
+        tools:layout="@layout/fragment_diagnosis_detail"
+        android:label="DiagnosisDetailFragment" />
+    <fragment
+        android:id="@+id/transmittedDetailFragment2"
+        android:name="com.example.covidtracker.ui.detail.TransmittedDetailFragment"
+        tools:layout="@layout/fragment_diagnosis_detail"
+        android:label="TransmittedDetailFragment" />
+    <fragment
+        android:id="@+id/preventDetailFragment2"
+        android:name="com.example.covidtracker.ui.detail.PreventDetailFragment"
+        tools:layout="@layout/fragment_prevent_detail"
+        android:label="PreventDetailFragment" />
+    <fragment
+        android:id="@+id/maskDetailFragment"
+        android:name="com.example.covidtracker.ui.detail.MaskDetailFragment"
+        tools:layout="@layout/fragment_mask_detail"
+        android:label="MaskDetailFragment" />
+    <fragment
+        android:id="@+id/travelDetailFragment"
+        android:name="com.example.covidtracker.ui.detail.TravelDetailFragment"
+        tools:layout="@layout/fragment_travel_detail"
+        android:label="TravelDetailFragment" />
+    <fragment
+        android:id="@+id/treatmentDetailFragment"
+        android:name="com.example.covidtracker.ui.detail.TreatmentDetailFragment"
+        tools:layout="@layout/fragment_treatment_detail"
+        android:label="TreatmentDetailFragment" />
+</navigation>

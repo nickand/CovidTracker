@@ -40,7 +40,7 @@
             android:layout_marginStart="@dimen/spacing_ssm"
             android:layout_marginTop="@dimen/spacing_sm"
             android:layout_marginEnd="@dimen/spacing_xs"
-            android:text="How is it transmitted?"
+            android:text="@string/how_is_it_transmitted"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_sssm"
             android:layout_marginBottom="@dimen/spacing_md"

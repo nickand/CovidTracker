@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/spacing_md"
+        android:paddingEnd="@dimen/spacing_md"
+        android:paddingTop="@dimen/spacing_xs"
+        android:paddingBottom="@dimen/spacing_md"
+        android:background="@drawable/grey_gradient">
+
+        <TextView
+            android:id="@+id/countryName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            fontPath="fonts/NunitoSans-ExtraBold.ttf"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_lg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deathCount"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="CHINA" />
+
+        <TextView
+            android:id="@+id/newCasesCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fontPath="fonts/NunitoSans-ExtraBold.ttf"
+            android:textColor="@color/colorAmber_A400"
+            android:textSize="@dimen/text_size_sm"
+            app:layout_constraintStart_toStartOf="@+id/countryName"
+            app:layout_constraintTop_toBottomOf="@+id/countryName"
+            tools:text="41" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            fontPath="fonts/NunitoSans-SemiBold.ttf"
+            android:text="@string/new_cases"
+            android:textColor="@color/gray_light"
+            android:textSize="@dimen/text_size_sm"
+            app:layout_constraintBottom_toBottomOf="@+id/newCasesCount"
+            app:layout_constraintStart_toEndOf="@+id/newCasesCount"
+            app:layout_constraintTop_toTopOf="@+id/newCasesCount"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/confirmedCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:layout_marginStart="@dimen/spacing_md"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            fontPath="fonts/NunitoSans-ExtraBold.ttf"
+            android:textColor="@color/colorAmber_A400"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/iconConfirmed"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="81,008" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconConfirmed"
+            android:layout_width="@dimen/spacing_md"
+            android:layout_height="@dimen/spacing_md"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:tint="@color/white"
+            app:layout_constraintTop_toTopOf="@+id/confirmedCount"
+            app:layout_constraintBottom_toBottomOf="@+id/confirmedCount"
+            app:srcCompat="@drawable/ic_eye"/>
+
+        <TextView
+            android:id="@+id/recoveredCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xs"
+            fontPath="fonts/NunitoSans-ExtraBold.ttf"
+            android:textColor="@color/colorGreen_A400"
+            android:textSize="24sp"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            app:layout_constraintStart_toStartOf="@+id/confirmedCount"
+            app:layout_constraintEnd_toEndOf="@+id/confirmedCount"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iconRecovered"
+            tools:text="81,008" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconRecovered"
+            android:layout_width="@dimen/spacing_md"
+            android:layout_height="@dimen/spacing_md"
+            android:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recoveredCount"
+            app:layout_constraintBottom_toBottomOf="@+id/recoveredCount"
+            app:srcCompat="@drawable/ic_heart"/>
+
+        <TextView
+            android:id="@+id/deathCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxxs"
+            fontPath="fonts/NunitoSans-ExtraBold.ttf"
+            android:textColor="@color/red_light"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/confirmedCount"
+            app:layout_constraintStart_toStartOf="@+id/confirmedCount"
+            app:layout_constraintTop_toBottomOf="@+id/recoveredCount"
+            tools:text="81,008" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconDeath"
+            android:layout_width="@dimen/spacing_md"
+            android:layout_height="@dimen/spacing_md"
+            android:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/deathCount"
+            app:layout_constraintBottom_toBottomOf="@+id/deathCount"
+            app:srcCompat="@drawable/ic_skull"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
