@@ -3,15 +3,17 @@ package com.example.covidtracker.ui.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.example.covidtracker.R
 import com.example.covidtracker.data.model.CountryStat
 import kotlinx.android.synthetic.main.item_list.view.*
 
+
 class CountryWiseAdapter(
     private val list: MutableList<CountryStat>,
-    private val listener: OnEvent
-): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    private val listener: OnEvent) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var originalList = mutableListOf<CountryStat>()
 
@@ -28,23 +30,23 @@ class CountryWiseAdapter(
     }
 
     private fun filterColombia(list: List<CountryStat>) {
-        var indiaIndex = -1
-        var indiaItem: CountryStat? = null
+        var colIndex = -1
+        var colItem: CountryStat? = null
 
         for (index in list.indices) {
             if (list[index].countryName == "Colombia") {
-                indiaIndex = index
-                indiaItem = list[index]
+                colIndex = index
+                colItem = list[index]
                 break
             }
         }
 
-        if (indiaIndex != -1 && indiaItem != null) {
-            this.list.add(0, indiaItem)
-            this.list.removeAt(indiaIndex + 1)
+        if (colIndex != -1 && colItem != null) {
+            this.list.add(0, colItem)
+            this.list.removeAt(colIndex + 1)
 
-            originalList.add(0, indiaItem)
-            originalList.removeAt(indiaIndex + 1)
+            originalList.add(0, colItem)
+            originalList.removeAt(colIndex + 1)
         }
     }
 
@@ -82,7 +84,7 @@ class CountryWiseAdapter(
         notifyDataSetChanged()
     }
 
-    inner class CountryWiseViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    inner class CountryWiseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(countryStat: CountryStat) {
             itemView.apply {

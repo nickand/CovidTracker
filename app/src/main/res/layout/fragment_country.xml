@@ -6,6 +6,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/gray_extra_dark">
 
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_xxlg"
+        android:layout_marginLeft="@dimen/spacing_sm"
+        android:layout_marginTop="@dimen/spacing_lg"
+        android:layout_marginRight="@dimen/spacing_sm"
+        android:background="@drawable/bg_rounded_edit_text"
+        android:drawableStart="@drawable/ic_grey_search"
+        android:drawablePadding="@dimen/spacing_xxs"
+        android:hint="@string/search_country"
+        android:imeOptions="actionSearch"
+        android:inputType="text|textNoSuggestions"
+        android:paddingStart="@dimen/spacing_sm"
+        android:paddingTop="@dimen/spacing_xxs"
+        android:paddingEnd="@dimen/spacing_xxs"
+        android:paddingBottom="@dimen/spacing_xxs"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/text_size_sm" />
+
     <TextView
         android:id="@+id/confirmedTitle"
         android:layout_width="100dp"
@@ -21,7 +43,7 @@
         app:layout_constraintEnd_toStartOf="@+id/recoveredTitle"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText" />
 
     <TextView
         android:id="@+id/recoveredTitle"
@@ -37,7 +59,7 @@
         android:textSize="@dimen/text_size_sm"
         app:layout_constraintEnd_toStartOf="@+id/deathTitle"
         app:layout_constraintStart_toEndOf="@+id/confirmedTitle"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText" />
 
     <TextView
         android:id="@+id/deathTitle"
@@ -53,7 +75,7 @@
         android:textSize="@dimen/text_size_sm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/recoveredTitle"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/countryWiseRecyclerView"

@@ -4,6 +4,7 @@
     <dimen name="spacing_xxxxs">2dp</dimen>
     <dimen name="spacing_xxxs">4dp</dimen>
     <dimen name="spacing_xxs">8dp</dimen>
+    <dimen name="spacing_xss">10dp</dimen>
     <dimen name="spacing_xs">12dp</dimen>
     <dimen name="spacing_ssm">15dp</dimen>
     <dimen name="spacing_sm">16dp</dimen>
