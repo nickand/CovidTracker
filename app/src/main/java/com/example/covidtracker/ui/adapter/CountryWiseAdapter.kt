@@ -3,13 +3,11 @@ package com.example.covidtracker.ui.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Filter
-import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.example.covidtracker.R
 import com.example.covidtracker.data.model.CountryStat
+import com.example.covidtracker.extensions.filterColombia
 import kotlinx.android.synthetic.main.item_list.view.*
-
 
 class CountryWiseAdapter(
     private val list: MutableList<CountryStat>,
@@ -25,29 +23,8 @@ class CountryWiseAdapter(
     fun addData(list: List<CountryStat>) {
         this.list.addAll(list)
         originalList.addAll(list)
-        filterColombia(list)
+        filterColombia(list.toMutableList(), this.list, originalList)
         notifyDataSetChanged()
-    }
-
-    private fun filterColombia(list: List<CountryStat>) {
-        var colIndex = -1
-        var colItem: CountryStat? = null
-
-        for (index in list.indices) {
-            if (list[index].countryName == "Colombia") {
-                colIndex = index
-                colItem = list[index]
-                break
-            }
-        }
-
-        if (colIndex != -1 && colItem != null) {
-            this.list.add(0, colItem)
-            this.list.removeAt(colIndex + 1)
-
-            originalList.add(0, colItem)
-            originalList.removeAt(colIndex + 1)
-        }
     }
 
     fun getList(): MutableList<CountryStat> {
