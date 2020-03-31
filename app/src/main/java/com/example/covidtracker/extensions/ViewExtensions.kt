@@ -40,7 +40,7 @@ fun ImageView.loadGlideUrl(url: GlideUrl) {
                 target: Target<Drawable>?,
                 isFirstResource: Boolean
             ): Boolean {
-                this@loadGlideUrl.scaleType = ImageView.ScaleType.CENTER
+                this@loadGlideUrl.scaleType = ImageView.ScaleType.FIT_XY
                 return false
             }
 
@@ -58,7 +58,7 @@ fun ImageView.loadGlideUrl(url: GlideUrl) {
         .apply(
             RequestOptions()
                 .placeholder(R.color.white_70_percent)
-                .error(R.drawable.ic_virus)
+                .error(R.drawable.error_image)
         )
         .into(this)
 }

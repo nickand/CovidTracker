@@ -6,5 +6,5 @@ object Constants{
 
     const val BASE_URL = "https://coronavirus-monitor.p.rapidapi.com/"
     const val API_KEY = BuildConfig.API_KEY
-    const val MASK_INSTRUCTIONS_URL = BASE_URL + "coronavirus/masks.php"
+    const val MASK_INSTRUCTIONS_URL = BASE_URL + "coronavirus/random_masks_usage_instructions.php"
 }
