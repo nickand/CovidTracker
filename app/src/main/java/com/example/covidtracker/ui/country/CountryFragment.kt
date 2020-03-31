@@ -15,6 +15,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.covidtracker.R
 import com.example.covidtracker.extensions.gone
+import com.example.covidtracker.extensions.search
 import com.example.covidtracker.extensions.visible
 import com.example.covidtracker.ui.adapter.CountryWiseAdapter
 import kotlinx.android.synthetic.main.fragment_country.*
@@ -88,7 +89,7 @@ class CountryFragment : Fragment(), CountryWiseAdapter.OnEvent {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                listAdapter.search(s.toString())
+                listAdapter.search(listAdapter.getList(), listAdapter.getOriginalList(), s.toString())
             }
 
         })

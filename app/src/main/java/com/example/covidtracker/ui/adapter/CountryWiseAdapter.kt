@@ -50,6 +50,14 @@ class CountryWiseAdapter(
         }
     }
 
+    fun getList(): MutableList<CountryStat> {
+        return list
+    }
+
+    fun getOriginalList(): MutableList<CountryStat> {
+        return originalList
+    }
+
     fun clear() {
         list.clear()
         originalList.clear()
@@ -61,27 +69,6 @@ class CountryWiseAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (holder is CountryWiseViewHolder)
             holder.bind(list[position])
-    }
-
-    fun search(query: String) {
-        list.clear()
-        this.list.addAll(originalList)
-
-        if (query.isNotEmpty()) {
-            var index = 0
-
-            while (index < list.size) {
-                if (list[index].countryName.toLowerCase().contains(query.toLowerCase()).not()) {
-                    list.removeAt(index)
-                    index--
-                }
-                index++
-            }
-
-            listener.logEvent(query)
-        }
-
-        notifyDataSetChanged()
     }
 
     inner class CountryWiseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
