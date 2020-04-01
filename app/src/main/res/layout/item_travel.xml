@@ -38,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_ssm"
             android:layout_marginBottom="@dimen/spacing_md"
+            android:paddingEnd="@dimen/spacing_md"
             app:fontFamily="@font/nunito_sans_extrabold"
             android:text="@string/information_for_travelers"
             android:textColor="@color/white"

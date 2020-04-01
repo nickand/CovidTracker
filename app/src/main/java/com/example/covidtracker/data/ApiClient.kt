@@ -9,7 +9,7 @@ interface ApiClient {
     @GET("coronavirus/cases_by_country.php")
     suspend fun getCountryWiseCases(): CountryWiseCase
 
-    @GET("coronavirus/world_total_stat.php")
+    @GET("coronavirus/worldstat.php")
     suspend fun getWorldStats(): WorldStats
 
     @GET("coronavirus/random_masks_usage_instructions.php")

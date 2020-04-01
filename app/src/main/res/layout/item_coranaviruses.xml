@@ -38,10 +38,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_ssm"
             android:layout_marginBottom="@dimen/spacing_md"
+            android:paddingEnd="@dimen/spacing_md"
             app:fontFamily="@font/nunito_sans_extrabold"
             android:text="@string/what_are_coronaviruses"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_sssm"
+            android:textSize="@dimen/text_size_ssm"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />

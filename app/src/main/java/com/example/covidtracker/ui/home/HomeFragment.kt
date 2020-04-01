@@ -72,9 +72,9 @@ class HomeFragment : Fragment() {
                 loadBanner()
                 customizeTitleApp()
 
-                txtCasesSubtitle.text = model.worldStat.totalCases
-                txtRecoveredSubtitle.text = model.worldStat.totalRecovered
-                txtDeathSubtitle.text = model.worldStat.totalDeath
+                txtCasesSubtitle.text = model.worldStat?.totalCases
+                txtRecoveredSubtitle.text = model.worldStat?.totalRecovered
+                txtDeathSubtitle.text = model.worldStat?.totalDeath
             }
             HomeViewModel.UiModel.ShowUi -> {
                 homeViewModel.getWorldStats()

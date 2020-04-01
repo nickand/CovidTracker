@@ -17,6 +17,7 @@
         android:background="@drawable/grey_gradient">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/diagnosisImageView"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="@dimen/spacing_xs"
@@ -38,6 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_ssm"
             android:layout_marginBottom="@dimen/spacing_md"
+            android:paddingEnd="@dimen/spacing_sm"
             app:fontFamily="@font/nunito_sans_extrabold"
             android:text="@string/how_is_the_diagnosis_made"
             android:textColor="@color/white"

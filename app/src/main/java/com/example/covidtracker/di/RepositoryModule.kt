@@ -1,7 +1,7 @@
 package com.example.covidtracker.di
 
-import com.example.covidtracker.data.CountryRepository
-import com.example.covidtracker.data.HomeRepository
+import com.example.covidtracker.ui.country.CountryRepository
+import com.example.covidtracker.ui.home.HomeRepository
 import org.koin.dsl.module
 
 val repositoryModule = module {

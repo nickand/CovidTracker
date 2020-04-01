@@ -17,6 +17,7 @@
         android:background="@drawable/grey_gradient">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/vaccineImageView"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="@dimen/spacing_xs"
@@ -36,13 +37,13 @@
             android:id="@+id/txtTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_ssm"
+            android:layout_marginStart="@dimen/spacing_sm"
             android:layout_marginBottom="@dimen/spacing_md"
             app:fontFamily="@font/nunito_sans_extrabold"
-            android:paddingEnd="@dimen/spacing_xs"
+            android:paddingEnd="@dimen/spacing_md"
             android:text="@string/is_there_a_vaccine_medication_or_treatment"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_ssm"
+            android:textSize="@dimen/text_size_sm"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />

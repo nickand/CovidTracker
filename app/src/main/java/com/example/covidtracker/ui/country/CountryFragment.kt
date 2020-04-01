@@ -55,7 +55,7 @@ class CountryFragment : Fragment(), CountryWiseAdapter.OnEvent {
             is CountryViewModel.UiModel.Content -> {
                 progressBar.gone()
 
-                listAdapter.addData(model.countryStat.countryStats)
+                model.countryStat?.countryStats?.let { listAdapter.addData(it) }
 
                 setupRecyclerView()
 

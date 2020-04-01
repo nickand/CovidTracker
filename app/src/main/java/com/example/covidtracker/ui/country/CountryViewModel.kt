@@ -3,9 +3,9 @@ package com.example.covidtracker.ui.country
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.covidtracker.data.CountryRepository
 import com.example.covidtracker.data.model.CountryStat
 import com.example.covidtracker.data.model.CountryWiseCase
+import com.example.covidtracker.util.ResultWrapper
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
@@ -13,6 +13,9 @@ class CountryViewModel(private val countryRepository: CountryRepository) : ViewM
     CoroutineScope {
 
     private var job: Job = Job()
+
+    private var countryWiseCases: CountryWiseCase? = null
+    private var errorCountryWiseCases: String? = null
 
     private val countryWiseCasesList = MutableLiveData<List<CountryStat>?>()
     val countryWiseCasesResponse: LiveData<List<CountryStat>?>
@@ -30,7 +33,7 @@ class CountryViewModel(private val countryRepository: CountryRepository) : ViewM
 
     sealed class UiModel {
         object Loading : UiModel()
-        class Content(val countryStat: CountryWiseCase) : UiModel()
+        class Content(val countryStat: CountryWiseCase?) : UiModel()
         class Navigation(val countryStat: CountryStat) : UiModel()
         object ShowUi : UiModel()
     }
@@ -50,7 +53,19 @@ class CountryViewModel(private val countryRepository: CountryRepository) : ViewM
     fun getCountryWiseCases() {
         launch {
             uiModel.value = UiModel.Loading
-            uiModel.value = UiModel.Content(countryRepository.getCountryWiseCases())
+
+            when (val countryResponse = countryRepository.getCountryWiseCases()) {
+                is ResultWrapper.GenericError -> {
+                    val responseData = countryResponse.error?.message
+                    errorCountryWiseCases = responseData
+                }
+                is ResultWrapper.Success -> {
+                    val responseData = countryResponse.value
+                    countryWiseCases = responseData
+                }
+            }
+
+            uiModel.value = UiModel.Content(countryWiseCases)
         }
     }
 
