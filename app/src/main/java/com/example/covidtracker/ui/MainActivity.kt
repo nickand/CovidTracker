@@ -1,15 +1,13 @@
 package com.example.covidtracker.ui
 
-import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import com.example.covidtracker.R
 import com.example.covidtracker.extensions.selectTab
-import com.example.covidtracker.ui.country.CountryActivity
-import com.example.covidtracker.ui.tips.TipsActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                     initHome()
                 }
                 R.id.action_tip -> {
-                    initSearch()
+                    initTips()
                 }
                 R.id.action_worldwide -> {
                     initCountry()
@@ -35,16 +33,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initCountry() {
-        startActivity(Intent(this, CountryActivity::class.java))
-        overridePendingTransition(0, 0)
+        navigationFragment.selectTab(R.id.countryFragment)
     }
 
-    private fun initSearch() {
-        startActivity(Intent(this, TipsActivity::class.java))
-        overridePendingTransition(0, 0)
+    private fun initTips() {
+        navigationFragment.selectTab(R.id.tipsFragment)
     }
 
     private fun initHome() {
         navigationFragment.selectTab(R.id.homeFragment)
+    }
+
+    override fun onBackPressed() {
+        val bottomNavigationView =
+            findViewById<View>(R.id.bottom_navigation) as BottomNavigationView
+        val selectedItemId = bottomNavigationView.selectedItemId
+        if (R.id.action_home != selectedItemId || R.id.action_home == selectedItemId) {
+            finish()
+        }
     }
 }

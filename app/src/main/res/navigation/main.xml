@@ -8,6 +8,28 @@
         android:id="@+id/homeFragment"
         android:name="com.example.covidtracker.ui.home.HomeFragment"
         tools:layout="@layout/fragment_home"
-        android:label="HomeFragment" >
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_tipsFragment"
+            app:destination="@id/tipsFragment"
+            app:popUpToInclusive="@null"/>
+        <action
+            android:id="@+id/action_homeFragment_to_countryFragment"
+            app:destination="@id/countryFragment"
+            app:popUpToInclusive="@null"/>
+    </fragment>
+    <fragment
+        android:id="@+id/tipsFragment"
+        android:name="com.example.covidtracker.ui.tips.TipsFragment"
+        tools:layout="@layout/fragment_tips"
+        android:label="TipsFragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/countryFragment"
+        android:name="com.example.covidtracker.ui.country.CountryFragment"
+        tools:layout="@layout/fragment_country"
+        android:label="CountryFragment">
+
     </fragment>
 </navigation>

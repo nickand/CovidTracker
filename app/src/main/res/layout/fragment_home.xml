@@ -53,6 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/text_size_sm"
+                android:layout_marginStart="@dimen/spacing_xs"
                 app:layout_constraintStart_toStartOf="@+id/todayStatisticsTitle"
                 app:layout_constraintTop_toBottomOf="@+id/todayStatisticsTitle">
 
@@ -102,8 +103,9 @@
                 layout="@layout/item_coranaviruses"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
-                android:layout_marginStart="@dimen/spacing_xs"
-                android:layout_marginTop="@dimen/text_size_sm"
+                android:layout_marginStart="@dimen/spacing_ssm"
+                android:layout_marginEnd="@dimen/spacing_ssm"
+                android:layout_marginTop="@dimen/spacing_ssm"
                 app:layout_constraintEnd_toStartOf="@+id/itemSymptoms"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tipsOfficersSubtitle" />
@@ -113,9 +115,8 @@
                 layout="@layout/item_symptoms"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
-                android:layout_marginStart="@dimen/spacing_xs"
-                android:layout_marginTop="@dimen/text_size_sm"
-                android:layout_marginEnd="@dimen/spacing_xs"
+                android:layout_marginTop="@dimen/spacing_ssm"
+                android:layout_marginEnd="@dimen/spacing_ssm"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/itemCoranaviruses"
                 app:layout_constraintTop_toBottomOf="@+id/tipsOfficersSubtitle" />
@@ -125,7 +126,7 @@
                 layout="@layout/item_transmitted"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
-                android:layout_marginTop="@dimen/spacing_xs"
+                android:layout_marginTop="@dimen/spacing_ssm"
                 app:layout_constraintEnd_toEndOf="@+id/itemCoranaviruses"
                 app:layout_constraintStart_toStartOf="@+id/itemCoranaviruses"
                 app:layout_constraintTop_toBottomOf="@+id/itemCoranaviruses" />
@@ -135,7 +136,7 @@
                 layout="@layout/item_prevent"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
-                android:layout_marginTop="@dimen/spacing_xs"
+                android:layout_marginTop="@dimen/spacing_ssm"
                 app:layout_constraintEnd_toEndOf="@+id/itemSymptoms"
                 app:layout_constraintStart_toEndOf="@+id/itemTransmitted"
                 app:layout_constraintStart_toStartOf="@+id/itemSymptoms"
@@ -144,28 +145,26 @@
             <ImageView
                 android:id="@+id/bannerImage"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="@dimen/spacing_ssm"
-                android:layout_marginTop="@dimen/spacing_mmd"
-                android:layout_marginEnd="@dimen/spacing_ssm"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toEndOf="@+id/appTitle"
-                app:layout_constraintStart_toStartOf="@+id/appTitle"
-                app:layout_constraintTop_toBottomOf="@+id/itemTransmitted"
-                tools:src="@drawable/ic_virus" />
-
-            <ProgressBar
-                android:id="@+id/progressBar"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:layout_marginTop="@dimen/spacing_ssm"
+                app:layout_constraintEnd_toEndOf="@+id/itemPrevent"
+                app:layout_constraintStart_toStartOf="@+id/itemTransmitted"
+                app:layout_constraintTop_toBottomOf="@+id/itemTransmitted"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                tools:src="@drawable/ic_virus" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

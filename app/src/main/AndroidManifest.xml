@@ -21,12 +21,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.tips.TipsActivity"
-            android:theme="@style/noAnimTheme" />
-        <activity
-            android:name=".ui.country.CountryActivity"
-            android:theme="@style/noAnimTheme" />
 
         <meta-data
             android:name="preloaded_fonts"

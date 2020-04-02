@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">    <item
-    android:id="@+id/action_home"
-    android:enabled="true"
-    android:icon="@drawable/ic_home"
-    android:title="Home"
-    app:showAsAction="ifRoom" />    <item
-    android:id="@+id/action_tip"
-    android:enabled="true"
-    android:icon="@drawable/ic_notebook"
-    android:title="Tips"
-    app:showAsAction="ifRoom" />    <item
-    android:id="@+id/action_worldwide"
-    android:enabled="true"
-    android:icon="@drawable/ic_earth"
-    android:title="Worldwide"
-    app:showAsAction="ifRoom" />
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_tip"
+        android:enabled="true"
+        android:icon="@drawable/ic_notebook"
+        android:title="Tips"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_worldwide"
+        android:enabled="true"
+        android:icon="@drawable/ic_earth"
+        android:title="Worldwide"
+        app:showAsAction="ifRoom" />
 </menu>
