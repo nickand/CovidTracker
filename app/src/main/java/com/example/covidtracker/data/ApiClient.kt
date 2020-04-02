@@ -11,7 +11,4 @@ interface ApiClient {
 
     @GET("coronavirus/worldstat.php")
     suspend fun getWorldStats(): WorldStats
-
-    @GET("coronavirus/random_masks_usage_instructions.php")
-    suspend fun getRandomImageInstructions(): WorldStats
 }

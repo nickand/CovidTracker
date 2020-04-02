@@ -1,28 +1,31 @@
 package com.example.covidtracker.ui.home
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
 import com.example.covidtracker.R
 import com.example.covidtracker.data.api.getGlideUrl
 import com.example.covidtracker.extensions.gone
 import com.example.covidtracker.extensions.loadGlideUrl
 import com.example.covidtracker.extensions.setRoundCorners
 import com.example.covidtracker.extensions.visible
+import com.example.covidtracker.ui.detail.DetailActivity
+import com.example.covidtracker.ui.detail.DetailFragment
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.item_total_cases.*
 import kotlinx.android.synthetic.main.item_total_death.*
 import kotlinx.android.synthetic.main.item_total_recovered.*
 import org.koin.android.viewmodel.ext.android.viewModel
+
 
 class HomeFragment : Fragment() {
 
@@ -43,17 +46,45 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         itemCoranaviruses.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_coronavirusesDetailFragment)
+            goToDetailActivivty(
+                requireContext(),
+                R.drawable.ic_bacteria,
+                getString(R.string.what_are_coronaviruses_subtitle),
+                getString(R.string.coronaviruses_detail))
         }
         itemSymptoms.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_symptomsDetailFragment)
+            goToDetailActivivty(
+                requireContext(),
+                R.drawable.ic_symptoms,
+                getString(R.string.what_are_the_symptoms_subtitle),
+                getString(R.string.symptoms_detail))
         }
         itemTransmitted.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_transmittedDetailFragment)
+            goToDetailActivivty(
+                requireContext(),
+                R.drawable.ic_transmitted,
+                getString(R.string.how_is_it_transmitted),
+                getString(R.string.transmitted_detail))
         }
         itemPrevent.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_preventDetailFragment)
+            goToDetailActivivty(
+                requireContext(),
+                R.drawable.ic_hands,
+                getString(R.string.how_prevent),
+                getString(R.string.prevent_detail))
         }
+    }
+
+    private fun goToDetailActivivty(
+        context: Context, image: Int,
+        title: String, description: String) {
+        val intent = Intent(context, DetailActivity::class.java)
+        val bundle = Bundle()
+        bundle.putInt(DetailFragment.IMAGE, image)
+        bundle.putString(DetailFragment.TITLE, title)
+        bundle.putString(DetailFragment.DESCRIPTION, description)
+        intent.putExtra(DetailFragment.DETAIL, bundle)
+        startActivity(intent)
     }
 
     private fun loadBanner() {

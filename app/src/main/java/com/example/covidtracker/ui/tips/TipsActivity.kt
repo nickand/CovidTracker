@@ -1,13 +1,14 @@
 package com.example.covidtracker.ui.tips
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.covidtracker.R
+import com.example.covidtracker.extensions.addFragment
 import com.example.covidtracker.extensions.selectTab
 import com.example.covidtracker.ui.MainActivity
 import com.example.covidtracker.ui.country.CountryActivity
+import com.example.covidtracker.ui.detail.DetailFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class TipsActivity : AppCompatActivity() {

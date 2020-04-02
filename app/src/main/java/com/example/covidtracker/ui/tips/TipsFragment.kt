@@ -1,5 +1,7 @@
 package com.example.covidtracker.ui.tips
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -11,6 +13,9 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.covidtracker.R
+import com.example.covidtracker.extensions.addFragment
+import com.example.covidtracker.ui.detail.DetailActivity
+import com.example.covidtracker.ui.detail.DetailFragment
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.itemCoranaviruses
 import kotlinx.android.synthetic.main.fragment_home.itemPrevent
@@ -35,29 +40,73 @@ class TipsFragment : Fragment() {
         customizeTitleApp()
 
         itemCoranaviruses.setOnClickListener {
-            findNavController().navigate(R.id.action_tipsFragment_to_coronavirusesDetailFragment2)
+            goToDetailActivivty(
+                requireContext(),
+                R.drawable.ic_bacteria,
+                getString(R.string.what_are_coronaviruses_subtitle),
+                getString(R.string.coronaviruses_detail))
         }
         itemSymptoms.setOnClickListener {
-            findNavController().navigate(R.id.action_tipsFragment_to_symptomsDetailFragment2)
+            goToDetailActivivty(
+                requireContext(),
+                R.drawable.ic_symptoms,
+                getString(R.string.what_are_the_symptoms_subtitle),
+                getString(R.string.symptoms_detail))
         }
         itemTransmitted.setOnClickListener {
-            findNavController().navigate(R.id.action_tipsFragment_to_transmittedDetailFragment2)
+            goToDetailActivivty(
+                requireContext(),
+                R.drawable.ic_transmitted,
+                getString(R.string.how_is_it_transmitted),
+                getString(R.string.transmitted_detail))
         }
         itemPrevent.setOnClickListener {
-            findNavController().navigate(R.id.action_tipsFragment_to_preventDetailFragment2)
+            goToDetailActivivty(
+                requireContext(),
+                R.drawable.ic_hands,
+                getString(R.string.how_prevent),
+                getString(R.string.prevent_detail))
         }
         itemWearMask.setOnClickListener {
-            findNavController().navigate(R.id.action_tipsFragment_to_maskDetailFragment)
+            goToDetailActivivty(
+                requireContext(),
+                R.drawable.ic_mask_detail,
+                getString(R.string.when_to_wear_a_mask),
+                getString(R.string.mask_detail))
         }
         itemDiagnosis.setOnClickListener {
-            findNavController().navigate(R.id.action_tipsFragment_to_diagnosisDetailFragment)
+            goToDetailActivivty(
+                requireContext(),
+                R.drawable.ic_diagnosis_detail,
+                getString(R.string.diagnosis_title),
+                getString(R.string.diagnosis_detail))
         }
         itemTravel.setOnClickListener {
-            findNavController().navigate(R.id.action_tipsFragment_to_travelDetailFragment)
+            goToDetailActivivty(
+                requireContext(),
+                R.drawable.ic_plane,
+                getString(R.string.information_for_travelers),
+                getString(R.string.travel_detail))
         }
         itemVaccine.setOnClickListener {
-            findNavController().navigate(R.id.action_tipsFragment_to_treatmentDetailFragment)
+            goToDetailActivivty(
+                requireContext(),
+                R.drawable.ic_treatment,
+                getString(R.string.is_there_a_vaccine_medication_or_treatment),
+                getString(R.string.treatment_detail))
         }
+    }
+
+    private fun goToDetailActivivty(
+        context: Context, image: Int,
+        title: String, description: String) {
+        val intent = Intent(context, DetailActivity::class.java)
+        val bundle = Bundle()
+        bundle.putInt(DetailFragment.IMAGE, image)
+        bundle.putString(DetailFragment.TITLE, title)
+        bundle.putString(DetailFragment.DESCRIPTION, description)
+        intent.putExtra(DetailFragment.DETAIL, bundle)
+        startActivity(intent)
     }
 
     private fun customizeTitleApp() {

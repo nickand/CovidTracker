@@ -28,7 +28,7 @@
                 android:layout_marginTop="@dimen/spacing_xxxxlg"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_plane" />
+                tools:srcCompat="@drawable/ic_bacteria" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/closeImage"
@@ -42,14 +42,13 @@
                 app:srcCompat="@drawable/ic_close" />
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/titleDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_lg"
                 android:layout_marginStart="@dimen/spacing_md"
-                android:layout_marginEnd="@dimen/spacing_md"
                 android:fontFamily="@font/nunito_sans_extrabold"
-                android:text="@string/information_for_travelers"
+                tools:text="@string/what_are_coronaviruses_subtitle"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_md"
                 app:fontFamily="@font/nunito_sans_extrabold"
@@ -57,22 +56,22 @@
                 tools:layout_editor_absoluteX="24dp" />
 
             <TextView
-                android:id="@+id/subtitle"
+                android:id="@+id/descriptionDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_xs"
                 android:layout_marginStart="@dimen/spacing_md"
                 android:layout_marginEnd="@dimen/spacing_md"
                 android:fontFamily="@font/nunito_sans_semibold"
-                android:text="@string/travel_detail"
+                tools:text="@string/coronaviruses_detail"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_ssm"
                 app:fontFamily="@font/nunito_sans_semibold"
-                app:layout_constraintTop_toBottomOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/titleDetail"
                 tools:layout_editor_absoluteX="24dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
+        
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
