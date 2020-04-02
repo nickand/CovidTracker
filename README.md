@@ -5,6 +5,6 @@ Coronavirus Tracker for Android which shows worldwide data of confirmed cases, r
 
 </br>
 
-[<img src="https://www.scottishchildrenslottery.com/export/system/modules/com.assense.gaming.stv.template/resources/images/google-play-store.svg" height="45" />](https://drive.google.com/open?id=1PRrGP_cQbK8khlHv83wtozCdE3v_8dAq)
+[<img src="https://www.scottishchildrenslottery.com/export/system/modules/com.assense.gaming.stv.template/resources/images/google-play-store.svg" height="45" />](https://drive.google.com/open?id=1mG6_bQak4RduBh9NuJyqAeFxayrujikm)
 
 ![coronavirus_tracker_banner](https://user-images.githubusercontent.com/4821464/77816551-80b2ed00-7091-11ea-89a5-24f3b0e3f128.png)
